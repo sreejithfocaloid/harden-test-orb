@@ -2,8 +2,8 @@ version: 2.1
 
 description: >
   This is  a test hardening orb
-# What will your orb allow users to accomplish?
-# Descriptions should be short, simple, and informative.
+  What will your orb allow users to accomplish?
+  Descriptions should be short, simple, and informative.
 
 # This information will be displayed in the orb registry and is not mandatory.
 display:
