@@ -13,3 +13,5 @@ parameters:
 steps:
   - checkout
   - setup-dependencies
+  - cli-instrument
+
