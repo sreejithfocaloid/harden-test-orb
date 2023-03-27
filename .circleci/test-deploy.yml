@@ -7,22 +7,12 @@ filters: &filters
   tags:
     only: /.*/
 
-jobs:
-  # Create a job to test the commands of your orbs.
-  # You may want to add additional validation steps to ensure the commands are working as expected.
-  command-tests:
-    docker:
-      - image: cimg/base:current
-    steps:
-      - checkout
-      # Run your orb's commands to validate them.
-      - harden-test-orb/greet
+
 workflows:
   test-deploy:
     jobs:
+      - harden-test-orb/hello
       # Make sure to include "filters: *filters" in every test job you want to run as part of your deployment.
-      - command-tests:
-          filters: *filters
       - orb-tools/pack:
           filters: *filters
       - orb-tools/publish:
@@ -31,7 +21,6 @@ workflows:
           pub-type: production
           requires:
             - orb-tools/pack
-            - command-tests
           context: orb-publishing
           filters:
             branches:

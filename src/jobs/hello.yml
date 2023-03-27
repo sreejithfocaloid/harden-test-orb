@@ -2,7 +2,8 @@ description: >
   Sample description
 # What will this job do?
 
-executor: default
+docker:
+  - image: cimg/base:current
 
 parameters:
   to:
@@ -10,5 +11,5 @@ parameters:
     default: "World"
     description: "Hello to whom?"
 steps:
-  - greet:
-      to: << parameters.to >>
+  - checkout
+  - setup-dependencies
