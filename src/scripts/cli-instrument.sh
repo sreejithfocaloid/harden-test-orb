@@ -19,7 +19,7 @@ log_output=$(slim instrument \
 workflow_id=$(echo "$log_output" | grep -Eo 'workflow id: [a-zA-Z0-9\.]+')
 workflow_id=${workflow_id#"workflow id: "}
 
-if [[ $log_output =~ "[instrument] instrumented" ]]; then
+if [[ $log_output =~ '[instrument] instrumented' ]]; then
   echo "The image has been successfully instrumented ($workflow_id)."
 else
   echo "The image instrumentation failed ($workflow_id)."
