@@ -26,3 +26,4 @@ else
   echo "The image instrumentation failed ($workflow_id)."
   exit 1
 fi
+echo "export WORKFLOW_ID=$workflow_id" >> "$BASH_ENV"
