@@ -1,5 +1,4 @@
 #!/bin/bash
-export PATH="${HOME}/.slim/bin:$PATH"
 echo Hello "Instrument"
 echo "${ABC}"
 SOURCE_CONNECTOR_ID="dockerhub.public"

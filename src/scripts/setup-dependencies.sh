@@ -8,7 +8,8 @@ sudo apt install -qq -y libxml2-utils
 
 # echo "Configure Slim.ai CLI"
 # echo "Adding ${HOME}/.slim/bin"
-export PATH="${HOME}/.slim/bin:$PATH"
+export PATH="$HOME/.slim/bin:$PATH"
+echo "export PATH=$HOME/.slim/bin:$PATH" >> "$BASH_ENV"
 
 # echo "export PATH=~/.slim/bin:$PATH" >> ./.bashrc
 # source "$HOME/.bashrc"
