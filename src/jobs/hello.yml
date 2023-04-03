@@ -14,6 +14,8 @@ steps:
   - checkout
   - setup-dependencies
   - cli-instrument
+  - setup_remote_docker:
+          version: 20.10.14
   - run-image
   - cleanup
   - cli-harden
