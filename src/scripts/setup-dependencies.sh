@@ -9,7 +9,7 @@ sudo apt install -qq -y libxml2-utils
 # echo "Configure Slim.ai CLI"
 # echo "Adding ${HOME}/.slim/bin"
 export PATH="${HOME}/.slim/bin:$PATH"
-echo 'export PATH="${PATH}:${HOME}/.slim/bin"' >> ${HOME}/.bashrc
+echo 'export PATH="${PATH}:${HOME}/.slim/bin"' >> "${HOME}"/.bashrc
 # echo "${HOME}/.slim/bin" >>$GITHUB_PATH
 slim config gen --save --token "${PORTAL0_API_TOKEN}" --org "${PORTAL0_ORGANIZATION_ID}"
 # echo "token: ${PORTAL0_API_TOKEN}"> ~/.config/slim/config
