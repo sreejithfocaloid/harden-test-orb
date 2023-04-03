@@ -8,13 +8,13 @@ IMAGE_PLATFORM="linux/amd64"
 TARGET_CONNECTOR_ID="${CONNECTOR_ID}"
 
 log_output=$(slim instrument \
-  --platform=$IMAGE_PLATFORM \
-  --target-image-connector $SOURCE_CONNECTOR_ID \
-  --instrumented-image-connector $TARGET_CONNECTOR_ID \
-  --instrumented-image $PROJECT_IMAGE_INSTRUMENTED \
-  --hardened-image-connector $TARGET_CONNECTOR_ID \
-  --hardened-image $PROJECT_IMAGE_SLIMMED \
-  $BASEIMAGE 2>&1 | tee /dev/stderr)
+  --platform="$IMAGE_PLATFORM" \
+  --target-image-connector "$SOURCE_CONNECTOR_ID" \
+  --instrumented-image-connector "$TARGET_CONNECTOR_ID" \
+  --instrumented-image "$PROJECT_IMAGE_INSTRUMENTED" \
+  --hardened-image-connector "$TARGET_CONNECTOR_ID" \
+  --hardened-image "$PROJECT_IMAGE_SLIMMED" \
+  "$BASEIMAGE" 2>&1 | tee /dev/stderr)
 
 workflow_id=$(echo "$log_output" | grep -Eo 'workflow id: [a-zA-Z0-9\.]+')
 workflow_id=${workflow_id#"workflow id: "}
