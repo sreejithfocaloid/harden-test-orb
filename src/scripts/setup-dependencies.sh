@@ -11,7 +11,7 @@ sudo apt install -qq -y libxml2-utils
 # export PATH="${HOME}/.slim/bin:$PATH"
 
 echo "export PATH=~/.slim/bin:$PATH" >> ~/.bashrc
-source ~/.bashrc
+source "~/.bashrc"
 # echo "${HOME}/.slim/bin" >>$GITHUB_PATH
 slim config gen --save --token "${PORTAL0_API_TOKEN}" --org "${PORTAL0_ORGANIZATION_ID}"
 # echo "token: ${PORTAL0_API_TOKEN}"> ~/.config/slim/config
