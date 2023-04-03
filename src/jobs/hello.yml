@@ -14,5 +14,5 @@ steps:
   - checkout
   - setup-dependencies
   - cli-instrument:
-      param1:"${env.ABC}"
+      param1:"${ABC}"
 
