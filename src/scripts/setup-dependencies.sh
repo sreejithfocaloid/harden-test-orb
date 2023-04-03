@@ -20,3 +20,4 @@ slim config gen --save --token "${PORTAL0_API_TOKEN}" --org "${PORTAL0_ORGANIZAT
 # #Optional For Testing
 slim status build
 cat ~/.config/slim/config
+export abc=123
