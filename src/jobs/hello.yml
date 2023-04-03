@@ -14,5 +14,7 @@ steps:
   - checkout
   - setup-dependencies
   - cli-instrument
+  - run
+  - cleanup
   - cli-harden
 
