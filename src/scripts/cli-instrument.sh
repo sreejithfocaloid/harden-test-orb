@@ -1,7 +1,7 @@
 #!/bin/bash
 export PATH="${HOME}/.slim/bin:$PATH"
 echo Hello "Instrument"
-echo "${ env.ABC }"
+echo "$param1"
 SOURCE_CONNECTOR_ID="dockerhub.public"
 PROJECT_IMAGE_INSTRUMENTED="sreejithfocaloid/node-example:latest.instrumented"
 PROJECT_IMAGE_SLIMMED="sreejithfocaloid/node-example:latest.slimxx"
