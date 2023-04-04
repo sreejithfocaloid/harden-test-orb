@@ -6,4 +6,3 @@ steps:
   - run:
       name: HARDEN IMAGE
       command: <<include(scripts/cli-harden.sh)>>
-
