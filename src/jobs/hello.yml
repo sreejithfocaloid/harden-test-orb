@@ -13,7 +13,7 @@ steps:
       key: my-cache
       paths:
         - my_var.txt
-      unconditional: true
+      force: true
       variables:
         WORKFLOW_ID: $WORKFLOW_ID
   - setup_remote_docker:
