@@ -1,5 +1,5 @@
 #!/bin/bash
-#WORKFLOW_ID=$(cat my_var.txt)
+WORKFLOW_ID=$(cat my_var.txt)
 echo "Hardening workflow: $WORKFLOW_ID"
 log_output=$(slim harden --id "$WORKFLOW_ID" 2>&1 | tee /dev/stderr)
 
