@@ -15,7 +15,4 @@ steps:
   - setup-dependencies
   - attach_workspace:
       at: .
-  - restore_cache:
-      keys:
-        - my-cache
   - cli-harden
