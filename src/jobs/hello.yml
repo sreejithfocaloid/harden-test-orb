@@ -11,8 +11,6 @@ steps:
   - cli-instrument
   - persist_to_workspace:
       root: .
-      paths:
-        - my-file.txt
   - save_cache:
       key: my-cache
       paths:
