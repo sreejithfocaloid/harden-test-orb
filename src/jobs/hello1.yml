@@ -14,4 +14,3 @@ steps:
   - checkout
   - setup-dependencies
   - cli-harden
-  
