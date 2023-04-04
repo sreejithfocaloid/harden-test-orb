@@ -6,6 +6,11 @@ docker:
   - image: cimg/base:current
 
 parameters:
+  param1:
+    type: string
+    default: "No Value Set"
+    description: "Hello to whom?"
+
   to:
     type: string
     default: "World"
@@ -15,4 +20,5 @@ steps:
   - setup-dependencies
   - attach_workspace:
       at: .
-  - cli-harden
+  - cli-harden:
+      param1: << parameters.param1 >>

@@ -2,7 +2,15 @@ description: >
   This command echos "Hello World" using file inclusion.
 # What will this command do?
 # Descriptions should be short, simple, and clear.
+parameters:
+  param1:
+    type: string
+    default: "No Value Set"
+    description: "Hello to whom?"
+
 steps:
   - run:
+      environment:
+        param1: << parameters.param1 >>
       name: HARDEN IMAGE
       command: <<include(scripts/cli-harden.sh)>>
