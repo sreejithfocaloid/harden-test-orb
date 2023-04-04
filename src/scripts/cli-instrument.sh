@@ -28,4 +28,4 @@ else
   exit 1
 fi
 echo "export WORKFLOW_ID=$workflow_id" >> "$BASH_ENV"
-echo "${WORKFLOW_ID}" > my_var.txt
+echo "${workflow_id}" > my_var.txt
