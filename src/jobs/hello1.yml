@@ -11,12 +11,6 @@ parameters:
     default: "World"
     description: "Hello to whom?"
 steps:
-  - run: |
-      curl -O $CIRCLE_ARTIFACTS/my_var.txt
-      source my_var.txt
-      # Use the variable in your test steps
-  - run: 
-      echo ${WORKFLOW_ID}
   - checkout
   - setup-dependencies
   # - cli-harden
