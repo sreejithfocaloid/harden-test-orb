@@ -7,4 +7,3 @@ steps:
   - run:
       name: INSTRUMENTATION
       command: <<include(scripts/cli-instrument.sh)>>
-

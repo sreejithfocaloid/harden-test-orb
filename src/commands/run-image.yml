@@ -7,4 +7,3 @@ steps:
   - run:
       name: RUN INSTRUMENTED IMAGE
       command: <<include(scripts/run.sh)>>
-

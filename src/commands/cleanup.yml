@@ -7,4 +7,3 @@ steps:
   - run:
       name: STOP INSTRUMENTED IMAGE
       command: <<include(scripts/cleanup.sh)>>
-
