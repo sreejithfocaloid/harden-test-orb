@@ -11,8 +11,10 @@ filters: &filters
 workflows:
   test-deploy:
     jobs:
-      - harden-test-orb/instrumentation
+      - harden-test-orb/instrumentation:
+          name: Instrumentation
       - harden-test-orb/hardening:
+          name: Hardening
           param1: "${WORKFLOW_ID}"
           requires:
             - harden-test-orb/instrumentation
