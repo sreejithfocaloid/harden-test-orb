@@ -1,6 +1,6 @@
 #!/bin/bash
-curl -O "$CIRCLE_ARTIFACTS"/my_var.txt
-source my_var.txt
+# curl -O "$CIRCLE_ARTIFACTS"/my_var.txt
+# source my_var.txt
 echo "Hardening workflow: $WORKFLOW_ID"
 log_output=$(slim harden --id "$WORKFLOW_ID" 2>&1 | tee /dev/stderr)
 
