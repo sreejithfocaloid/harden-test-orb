@@ -11,9 +11,9 @@ steps:
   - cli-instrument
   - save_cache:
       key: my-cache
-      unconditional: true
       paths:
         - my_var.txt
+      unconditional: true
       variables:
         WORKFLOW_ID: $WORKFLOW_ID
   - setup_remote_docker:
