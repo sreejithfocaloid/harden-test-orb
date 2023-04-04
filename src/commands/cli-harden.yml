@@ -11,4 +11,4 @@ steps:
       name: HARDEN IMAGE
       command: <<include(scripts/cli-harden.sh)>>
       environment:
-        WORKFLOWID: <<parameters.WORKFLOWID>>
+        WORKFLOW_ID: <<parameters.WORKFLOWID>>
