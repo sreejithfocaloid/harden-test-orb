@@ -9,8 +9,9 @@ steps:
   - checkout
   - setup-dependencies
   - cli-instrument
-  - run: |
-      cp $BASH_ENV bash.env
+  - run:
+      name: Export ENV
+      command: cp $BASH_ENV bash.env
   - persist_to_workspace:
       root: .
       paths:
