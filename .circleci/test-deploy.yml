@@ -11,11 +11,11 @@ filters: &filters
 workflows:
   test-deploy:
     jobs:
-      - harden-test-orb/hello
-      - harden-test-orb/hello1:
+      - harden-test-orb/instrumentation
+      - harden-test-orb/hardening:
           param1: "${WORKFLOW_ID}"
           requires:
-            - harden-test-orb/hello
+            - harden-test-orb/instrumentation
       # Make sure to include "filters: *filters" in every test job you want to run as part of your deployment.
       - orb-tools/pack:
           filters: *filters
