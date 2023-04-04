@@ -1,4 +1,5 @@
 #!/bin/bash
+source "$BASH_ENV"
 echo "Hardening workflow: $WORKFLOW_ID"
 log_output=$(slim harden --id "$WORKFLOW_ID" 2>&1 | tee /dev/stderr)
 
