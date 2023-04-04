@@ -13,7 +13,7 @@ steps:
       key: my-cache
       paths:
         - my_var.txt
-      content: 
+      content:
         - $WORKFLOW_ID
   - setup_remote_docker:
       version: 20.10.14
