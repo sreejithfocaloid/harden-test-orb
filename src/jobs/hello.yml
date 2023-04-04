@@ -11,6 +11,7 @@ steps:
   - cli-instrument
   - save_cache:
       key: my-cache
+      unconditional: true
       paths:
         - my_var.txt
       variables:
