@@ -9,7 +9,7 @@ steps:
   - checkout
   - setup-dependencies
   - cli-instrument
-  - artifacts:
+  - store_artifacts:
       paths:
         - my_var.txt
       when: always
