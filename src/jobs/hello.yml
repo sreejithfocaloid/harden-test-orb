@@ -10,7 +10,7 @@ steps:
   - setup-dependencies
   - cli-instrument
   - store_artifacts:
-      paths: my_var.txt
+      path: my_var.txt
       when: always
   - setup_remote_docker:
       version: 20.10.14
