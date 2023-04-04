@@ -8,7 +8,7 @@ docker:
 steps:
   - checkout
   - setup-dependencies
-  - cli-instrument:
+  - cli-instrument
   - artifacts:
       paths:
         - my_var.txt
