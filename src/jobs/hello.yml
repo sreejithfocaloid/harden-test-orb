@@ -9,10 +9,12 @@ steps:
   - checkout
   - setup-dependencies
   - cli-instrument
+  - run: |
+      cp $BASH_ENV bash.env
   - persist_to_workspace:
       root: .
       paths:
-        - my_var.txt
+        - bash.env
   - setup_remote_docker:
       version: 20.10.14
   - run-image

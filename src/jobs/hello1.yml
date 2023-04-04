@@ -20,5 +20,7 @@ steps:
   - setup-dependencies
   - attach_workspace:
       at: .
+  - run: |
+      cat bash.env >> $BASH_ENV
   - cli-harden:
       param1: << parameters.param1 >>
