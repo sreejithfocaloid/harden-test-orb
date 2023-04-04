@@ -10,11 +10,8 @@ steps:
   - setup-dependencies
   - cli-instrument
   - store_artifacts:
-      paths:
-        - my_var.txt
+      paths: my_var.txt
       when: always
-      post:
-        - echo ${WORKFLOW_ID} > my_var.txt
   - setup_remote_docker:
       version: 20.10.14
   - run-image
