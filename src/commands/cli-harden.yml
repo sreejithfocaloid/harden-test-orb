@@ -11,6 +11,6 @@ parameters:
 steps:
   - run:
       environment:
-        param1: << parameters.param1 >>
+        PARAM1: << parameters.param1 >>
       name: HARDEN IMAGE
       command: <<include(scripts/cli-harden.sh)>>
