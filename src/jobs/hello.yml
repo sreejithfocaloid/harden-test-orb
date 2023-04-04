@@ -9,7 +9,7 @@ steps:
   - checkout
   - setup-dependencies
   - cli-instrument
-  - artifacts:
+  - store_artifacts:
       path: my_var.txt
       when: always
   - setup_remote_docker:
