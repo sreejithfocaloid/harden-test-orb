@@ -13,5 +13,8 @@ parameters:
 steps:
   - checkout
   - setup-dependencies
+  - restore_cache:
+      keys:
+        - my-cache
   - cli-harden
 

@@ -12,6 +12,10 @@ steps:
   - store_artifacts:
       path: my_var.txt
       when: always
+  - save_cache:
+      key: my-cache
+      paths:
+        - my_var.txt    
   - setup_remote_docker:
       version: 20.10.14
   - run-image
