@@ -1,6 +1,6 @@
 #!/bin/bash
-echo "Param -> ${PARAM1}"
-WORKFLOW_ID=$(cat my_var.txt)
+# echo "Param -> ${PARAM1}"
+# WORKFLOW_ID=$(cat my_var.txt)
 echo "Hardening workflow: $WORKFLOW_ID"
 log_output=$(slim harden --id "$WORKFLOW_ID" 2>&1 | tee /dev/stderr)
 
