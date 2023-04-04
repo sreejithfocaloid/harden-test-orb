@@ -12,4 +12,5 @@ parameters:
     description: "Hello to whom?"
 steps:
   - checkout
-  - cli-instrument
+  - setup-dependencies
+  - cli-harden
