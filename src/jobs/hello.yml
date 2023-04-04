@@ -9,9 +9,6 @@ steps:
   - checkout
   - setup-dependencies
   - cli-instrument
-  - store_artifacts:
-      path: my_var.txt
-      when: always
   - save_cache:
       key: my-cache
       paths:
