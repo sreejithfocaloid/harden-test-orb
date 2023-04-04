@@ -5,6 +5,11 @@ description: >
 docker:
   - image: cimg/base:current
 
+parameters:
+  to:
+    type: string
+    default: "World"
+    description: "Hello to whom?"
 steps:
   - checkout
   - setup-dependencies
