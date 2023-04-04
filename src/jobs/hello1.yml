@@ -5,13 +5,7 @@ description: >
 docker:
   - image: cimg/base:current
 
-parameters:
-  WORKFLOWID:
-    type: string
-    default: "World"
-    description: "Hello to whom?"
 steps:
   - checkout
   - setup-dependencies
-  - cli-harden:
-      WORKFLOWID: << parameters.WORKFLOWID >>
+  - cli-harden

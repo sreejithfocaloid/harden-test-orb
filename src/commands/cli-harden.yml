@@ -2,13 +2,8 @@ description: >
   This command echos "Hello World" using file inclusion.
 # What will this command do?
 # Descriptions should be short, simple, and clear.
-parameters:
-  WORKFLOWID:
-    type: string
-    description: "Container image to scan, e.g. library/node:latest"
 steps:
   - run:
       name: HARDEN IMAGE
       command: <<include(scripts/cli-harden.sh)>>
-      environment:
-        WORKFLOW_ID: <<parameters.WORKFLOWID>>
+

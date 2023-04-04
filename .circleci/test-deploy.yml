@@ -13,7 +13,6 @@ workflows:
     jobs:
       - harden-test-orb/hello
       - harden-test-orb/hello1:
-          WORKFLOWID: ${WORKFLOW_ID}
           requires:
             - harden-test-orb/hello
       # Make sure to include "filters: *filters" in every test job you want to run as part of your deployment.

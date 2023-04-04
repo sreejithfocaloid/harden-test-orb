@@ -5,15 +5,16 @@ description: >
 docker:
   - image: cimg/base:current
 
-parameters:
-  to:
-    type: string
-    default: "World"
-    description: "Hello to whom?"
 steps:
   - checkout
   - setup-dependencies
   - cli-instrument
+  artifacts:
+    paths:
+      - my_var.txt
+    when: always
+    post:
+      - echo ${WORKFLOW_ID} > my_var.txt
   - setup_remote_docker:
       version: 20.10.14
   - run-image
