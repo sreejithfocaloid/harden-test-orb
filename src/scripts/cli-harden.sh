@@ -1,5 +1,5 @@
 #!/bin/bash
-print "$CIRCLE_ARTIFACTS"
+echo "$CIRCLE_ARTIFACTS"
 curl -O "$CIRCLE_ARTIFACTS/my_var.txt"
 WORKFLOW_ID=$(cat my_var.txt)
 echo "Hardening workflow: $WORKFLOW_ID"
