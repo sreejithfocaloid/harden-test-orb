@@ -15,4 +15,3 @@ steps:
   - setup-dependencies
   - cli-harden:
       WORKFLOWID: << parameters.WORKFLOWID >>
-
