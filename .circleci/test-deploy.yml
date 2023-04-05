@@ -17,7 +17,6 @@ workflows:
           sourceImage: sreejithfocaloid/node-example
       - harden-test-orb/hardening:
           name: Hardening
-          param1: "${WORKFLOW_ID}"
           requires:
             - Instrumentation
       # Make sure to include "filters: *filters" in every test job you want to run as part of your deployment.
