@@ -5,10 +5,22 @@ description: >
 docker:
   - image: cimg/base:current
 
+parameters:
+  sourceConnector:
+    type: string
+    description: "Hello to whom?"
+  sourceImage:
+    type: string
+    description: "Hello to whom?"
+
 steps:
   - checkout
   - setup-dependencies
   - cli-instrument
+  - run:
+      environment:
+        SOURCECONNECTOR: << parameters.sourceConnector >>
+        SOURCEIMAGE: << parameters.sourceImage >>
   - run:
       name: Export ENV
       command: cp $BASH_ENV bash.env

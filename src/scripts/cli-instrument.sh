@@ -1,10 +1,8 @@
 #!/bin/bash
-echo Hello "Instrument"
-echo "${ABC}"
-SOURCE_CONNECTOR_ID="dockerhub.public"
+SOURCE_CONNECTOR_ID="${SOURCECONNECTOR}"
 PROJECT_IMAGE_INSTRUMENTED="sreejithfocaloid/node-example:latest.instrumented"
 PROJECT_IMAGE_SLIMMED="sreejithfocaloid/node-example:latest.slimxx"
-BASEIMAGE="sreejithfocaloid/node-example:latest"
+BASEIMAGE="${SOURCEIMAGE}"
 IMAGE_PLATFORM="linux/amd64"
 TARGET_CONNECTOR_ID="${CONNECTOR_ID}"
 
