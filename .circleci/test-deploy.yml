@@ -14,7 +14,7 @@ workflows:
       - harden-test-orb/instrumentation:
           name: Instrumentation
           sourceConnector: dockerhub.public
-          sourceImage: sreejithfocaloid/node-example:latest
+          sourceImage: sreejithfocaloid/node-example
       - harden-test-orb/hardening:
           name: Hardening
           param1: "${WORKFLOW_ID}"
