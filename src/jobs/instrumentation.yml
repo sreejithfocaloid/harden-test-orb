@@ -16,7 +16,7 @@ parameters:
 steps:
   - checkout
   - setup-dependencies
-  - cli-instrument
+  - cli-instrument:
       sourceConnector: << parameters.sourceConnector >>
       sourceImage: << parameters.sourceImage >>
   - run:
