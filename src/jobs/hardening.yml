@@ -5,16 +5,6 @@ description: >
 docker:
   - image: cimg/base:current
 
-parameters:
-  param1:
-    type: string
-    default: "No Value Set"
-    description: "Hello to whom?"
-
-  to:
-    type: string
-    default: "World"
-    description: "Hello to whom?"
 steps:
   - checkout
   - setup-dependencies
@@ -23,5 +13,4 @@ steps:
   - run:
       name: Import ENV
       command: cat bash.env >> $BASH_ENV
-  - cli-harden:
-      param1: << parameters.param1 >>
+  - cli-harden
